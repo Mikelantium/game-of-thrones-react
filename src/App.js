@@ -1,6 +1,7 @@
 import "./App.css";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
+import BottonNavBar from "./components/BottonNavBar";
 import Routes from "./pages/Routes";
 import { MyContext } from "./shared/MyContext";
 import { useTranslation } from "react-i18next";
@@ -20,8 +21,8 @@ function App() {
       <Routes/>
         <div>{t("testText")} </div>
       </div>
-      <Main/>
-  
+      
+    <BottonNavBar/> 
     </Router>
     </MyContext.Provider>
   );

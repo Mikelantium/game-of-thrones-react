@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import axios from 'axios'
+import CharacterGallery from '../../components/CharacterGallery'
 
 
-const CharactersPage = ({data}) => {
+const CharactersPage = () => {
+    const [characters, setCharacters] = useState([])
+
+    const getCharacters = async() =>{
+      // const resultado = await axios('http://localhost:3000/characters')
+      const resultado = await axios.get('http://localhost:3000/characters')
+      setCharacters(resultado.data)
+      console.log(resultado.data)
+    }
+    useEffect(() => {
+      getCharacters();
+    },[])
+  
   return (
-    <div>
-     {data && data.map ((character, index) => (
-        <div key={index}>
-            <img src= {`http://localhost:3333/${character.image}`} alt={character.name}/>
-            <h2>{character.name}</h2>
-        </div>
-    ))} 
-    </div>
+  <>    
+    {characters && <CharacterGallery data = {characters}/>}
+    
+  </>
   )
 }
 

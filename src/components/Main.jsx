@@ -8,17 +8,17 @@ const Main = () => {
     const [characters, setCharacters] = useState([])
 
     const getCharacters = async() =>{
-      const resultado = await axios('http://localhost:3333/characters')
+      const resultado = await axios('http://localhost:3000/characters')
       setCharacters(resultado.data)
       console.log(resultado.data)
     }
     useEffect(() => {
       getCharacters();
     },[])
-  return (<>
-    <CharactersPage data = {characters}/>
-    <div>{t('counter_text')}: </div>
-    </>
+  return (
+  <>    
+    {characters && <CharactersPage data = {characters}/>}
+  </>
   )
 }
 
