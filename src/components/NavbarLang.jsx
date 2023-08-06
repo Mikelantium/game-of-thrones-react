@@ -1,14 +1,18 @@
-import React, { useContext } from 'react'
-import { MyContext } from '../shared/MyContext'
+import React, { useContext } from "react";
+import { MyContext } from "../shared/MyContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const {t, changeLanguage} = useContext(MyContext)
+  const { t, changeLanguage } = useContext(MyContext);
   return (
     <nav>
-        <button onClick={() => changeLanguage('es')}>{t('lang_es')}</button>
-        <button onClick={() => changeLanguage('en')}>{t('lang_en')}</button>
+      <Link to="/">
+        <button>⌂</button>
+      </Link>
+      <button onClick={() => changeLanguage("es")}>{t("lang_es")}</button>
+      <button onClick={() => changeLanguage("en")}>{t("lang_en")}</button>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -5,6 +5,7 @@ import HousesPage from "./HousesPage/HousesPage";
 import CharactersPage from "./CharactersPage/CharactersPage";
 import ChronologyPage from "./ChronologyPage/ChronologyPage";
 import CharactersDetailPage from "./CharactersDetailPage/CharactersDetailPage";
+import HousesDetailPage from "./HousesDetailPage/HousesDetailPage";
 
 export default function Routes (){
     return <RoutesDom>
@@ -14,6 +15,7 @@ export default function Routes (){
 <Route path="/characters" element={<CharactersPage />} />
 <Route path="/chronology" element={<ChronologyPage />} />
 <Route path="/characters/:id" element={<CharactersDetailPage />} />
+<Route path="/houses/:id" element={<HousesDetailPage />} />
 </RoutesDom>
 
 }

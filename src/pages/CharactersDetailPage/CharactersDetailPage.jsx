@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 export default function CharactersDetailPage() {
@@ -32,6 +32,10 @@ export default function CharactersDetailPage() {
 
 
 return  <>
+<Link to= "/characters">
+  <button>Volver</button>
+</Link>
+
     {characters && 
     <div> 
     <img src={`http://localhost:3333/${characters.image}`} alt={characters.name}/>
