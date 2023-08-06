@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-characters{
+    max-width: 250px;
+}
+
+.container-characters h2{
+    font-size: 20px;
+}
+.container-characters img{
+    width: 248px;
+    height: 320px;
+    margin: 0 18px 0 38px;
+    object-fit: cover;
+}

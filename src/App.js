@@ -1,6 +1,5 @@
 import "./App.css";
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavbarLang";
 import Routes from "./pages/Routes";
 import { MyContext } from "./shared/MyContext";
 import { useTranslation } from "react-i18next";
@@ -14,13 +13,12 @@ function App() {
   return (
     <MyContext.Provider value={{ t, changeLanguage }}>
     <Router>
+    <div className="App">
     <Navbar/>
     
-      <div className="App">
+      
       <Routes/>
-        <div>{t("testText")} </div>
       </div>
-      <Main/>
   
     </Router>
     </MyContext.Provider>
