@@ -12,17 +12,20 @@ function App() {
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
   };
+
+  
   return (
     <MyContext.Provider value={{ t, changeLanguage }}>
     <Router>
-    <Navbar/>
+    
     
       <div className="App">
-      <Routes/>
-        <div>{t("testText")} </div>
+      <Navbar/>
+        <Routes/>
+        <BottonNavBar/>        
       </div>
       
-    <BottonNavBar/> 
+     
     </Router>
     </MyContext.Provider>
   );

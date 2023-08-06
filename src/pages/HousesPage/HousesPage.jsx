@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const HousesPage = () => {
     const [houses, setHouses] = useState([])
+    const [search, setSearch] = useState("")
 
     const getHouses = async() =>{
       const resultado = await axios('http://localhost:3000/houses')
@@ -15,10 +16,28 @@ const HousesPage = () => {
     useEffect(() => {
         getHouses();
     },[])
+
+    const filterHouses = (event) => {
+      setSearch(event.target.value)
+      
+
+    }
+    let results = []
+    
+    // Si no se han introducido datos de búsqueda, se devuelve el array original. 
+    if (!search){
+      results = houses
+
+    } else {
+      results = houses.filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
+    }
+
   
   return (
-  <>    
-    {houses && <HousesGallery data = {houses}/>}
+  <> 
+    
+    <input type='text'  onChange={filterHouses} ></input>   
+    {results && <HousesGallery data = {results}/>}
     
   </>
   )

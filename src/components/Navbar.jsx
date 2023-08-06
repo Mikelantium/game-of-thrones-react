@@ -1,15 +1,41 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../shared/MyContext'
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, Link} from "react-router-dom";
 import "../App.css";
 
 const Navbar = () => {
     const {t, changeLanguage} = useContext(MyContext)
+    const location = useLocation();
+    console.log('Estoy en: ', location.pathname);
+
+    let showBackButton = false
+    let backPage = ""
+
+    if (location.pathname.includes("/characters/")){
+       showBackButton = true
+       backPage = '/characters'
+    }
+    if (location.pathname.includes("/houses/")){
+      showBackButton = true
+      backPage = '/houses'
+    }
+    
+
+    console.log('showBackButton: ', showBackButton);
+    console.log('backPage: ', backPage);
+
+  
   return (
     <nav>
-        {/* <button onClick={() => changeLanguage('es')}>{t('lang_es')}</button> */}
-        {/* <button onClick={() => changeLanguage('en')}>{t('lang_en')}</button> */}
         <div className='flex-jst-right'>
+          
+          <img src="left-arrow.png" alt="back-icon" /> 
+
+          {/* Si no estoy en Home, muestro el botón Home */}
+          {location.pathname !== "/" && <Link to={"/"}> <img src="home.png" alt="home-icon" /> </Link> }
+
+          
+          
           <img src="reino-unido.png" alt="" onClick={() => changeLanguage('en')}/>
           <img src="espana.png" alt="" onClick={() => changeLanguage('es')}/>
         </div>

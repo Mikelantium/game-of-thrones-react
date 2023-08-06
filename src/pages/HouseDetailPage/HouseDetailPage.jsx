@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom"
-import {useEffect, useState } from 'react'
+import { useParams  } from "react-router-dom"
+import {useEffect, useState, useContext } from 'react'
+import { MyContext } from '../../shared/MyContext' 
 import axios from 'axios'
 import '../../App.css';
 
 export default function HouseDetailPage() {
     const {id} = useParams()
+    const {t, changeLanguage} = useContext(MyContext) 
 
     console.log('Estoy en HouseDeail');
     console.log('El id recibido es:', id);
@@ -34,21 +36,21 @@ export default function HouseDetailPage() {
     <div className="house-info">
 
       <div>
-        <h3> LEMA </h3>
+        <h3> {t("t-watchword")}  </h3>
       </div>
 
       <div>
-        <h3> SEDE </h3>
+        <h3> {t("t-settlement")} </h3>
         <p> {houses.settlement} </p>
       </div>
 
       <div>
-        <h3> REGION </h3>
+        <h3> {t("t-region")} </h3>
         <p>{houses.region}</p>
       </div>
 
       <div>
-        <h3> ALIANZAS </h3>
+        <h3> {t("t-alliances")} </h3>
         <ul>
           {houses.alliances && houses.alliances.map((alliance) => <li>{alliance}</li>)}
         </ul>
@@ -56,7 +58,7 @@ export default function HouseDetailPage() {
       </div>
 
       <div>
-        <h3> RELIGIONES </h3>
+        <h3> {t("t-religions")} </h3>
         <ul>
           {houses.religions && houses.religions.map((religions) => <li>{religions}</li>)}
         </ul>
@@ -64,7 +66,7 @@ export default function HouseDetailPage() {
       </div>
 
       <div>
-        <h3> FUNDACION </h3>
+        <h3> {t("t-foundation")} </h3>
         <p> {houses.foundation} </p>
       </div>
 
