@@ -1,8 +1,10 @@
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function HousesDetailPage() {
+  const {t} = useTranslation ();
   const { id } = useParams();
 
   console.log("Recibo el id = ", id);
@@ -22,7 +24,7 @@ export default function HousesDetailPage() {
   return (
     <>
       <Link to="/houses">
-        <button>Volver</button>
+        <button>{t("back")} </button>
       </Link>
 
       {houses && (
@@ -36,32 +38,32 @@ export default function HousesDetailPage() {
           <div className="character-info">
             <div>
               <div>
-                <h3> SEDE </h3>
+                <h3> {t("seat")} </h3>
                 <p>{houses.settlement}</p>
               </div>
             </div>
 
             <div>
-              <h3> REGIÓN </h3>
+              <h3> {t("region")}  </h3>
               <p>{houses.region}</p>
             </div>
 
             <div>
-              <h3> ALIANZAS </h3>
+              <h3> {t("alliances")}  </h3>
               <ul>
      {houses.alliances && houses.alliances.map((alliances) => <li>{alliances}</li>)}
    </ul>
             </div>
 
             <div>
-              <h3> RELIGIONES </h3>
+              <h3> {t("religions")}  </h3>
               <ul>
      {houses.religions && houses.religions.map((religions) => <li>{religions}</li>)}
    </ul>
             </div>
 
             <div>
-              <h3> FUNDACIÓN </h3>
+              <h3> {t("foundation")}  </h3>
               <p>{houses.foundation}</p>
             </div>
           </div>

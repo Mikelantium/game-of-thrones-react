@@ -4,18 +4,25 @@ import NavbarFooter from '../../components/NavbarFooter';
 
 const ChronologyPage = () => {
     const [chronologies, setChronology] = useState([]);
+    const [arrangeOrder, setArrangeOrder] = useState();
 
     const getCharacters = async () => {
         const resultado = await axios('http://localhost:3333/characters');
-        setChronology(resultado.data);
+        setChronology (
+            resultado.data.filter((character) => character.age).sort((a,b) => (arrangeOrder ? a.age - b.age : b.age - a.age)) )
     }
 
     useEffect(() => {
         getCharacters();
-    }, [])
+    }, [arrangeOrder])
+
+    const changeOrder = () => {
+        setArrangeOrder(!arrangeOrder);
+    }
 
     return (
         <div>
+        <button onClick={changeOrder}>{arrangeOrder ? '↓' : '↑'}</button>
             {chronologies.map((chronology, index) => (
                 <div key={index}>
                 <h2>{chronology.age}</h2>

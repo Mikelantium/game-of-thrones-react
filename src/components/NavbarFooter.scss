@@ -1,0 +1,64 @@
+.text-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;  
+}
+
+.personajes{
+    width: 330px;
+    height: 44px;
+    margin: 32 0px 0 0;
+    font-family: "Game of Thrones";
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white);
+    text-decoration: none;
+    
+  }
+
+  .personajes.active{
+    text-decoration: underline;
+  }
+  .casas {
+    width: 330px;
+    height: 44px;
+    margin: 0 321px 0 342px;
+    font-family: "Game of Thrones";
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .casas.active {
+    text-decoration: underline;
+  }
+
+  .cronologia {
+    width: 330px;
+    height: 44px;
+    margin: 0 0 0 32px;
+    font-family: "Game of Thrones";
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .cronologia.active {
+    text-decoration: underline;
+  }

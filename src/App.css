@@ -1,9 +1,12 @@
+@font-face{
+  font-family: "Game of thrones";
+  src: local('Game-of-Thrones'), url('./fonts/Game\ of\ Thrones.ttf')
+}
+
 .App {
   text-align: center;
   color: white;
   background-color: black;
-  margin: 0px;
-  padding: 0px;
 }
 
 .App-logo {
@@ -40,3 +43,5 @@
     transform: rotate(360deg);
   }
 }
+
+

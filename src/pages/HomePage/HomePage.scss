@@ -1,0 +1,24 @@
+.Games-of-Thrones {
+    width: 1367px;
+    height: 390px;
+    margin: 246px 165px 249px;
+    font-family: "Game of Thrones";
+    font-size: 176px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white);
+  }
+
+
+  .background-img {
+    background-image: url("../../../public/images/background.svg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh
+  }
+
+
+

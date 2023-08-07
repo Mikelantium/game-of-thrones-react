@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
+import "./NavbarFooter.scss";
 
 const NavbarFooter = () => {
 
   return (
-    <nav>
-        <NavLink to="/characters" className={({ isActive }) => isActive ? "active" : ""}>Personajes</NavLink>
-        <NavLink to="/houses" className={({ isActive }) => isActive ? "active" : ""}>Casas</NavLink>
-        <NavLink to="/chronology" className={({ isActive }) => isActive ? "active" : ""}>Cronología</NavLink>
+    <nav className="text-container">
+        <NavLink to="/characters" className= "personajes" activeClassName= "active">PERSONAJES</NavLink>
+        <NavLink to="/houses" className= "casas" activeClassName= "active">CASAS</NavLink>
+        <NavLink to="/chronology" className= "cronologia" activeClassName= "active">CRONOLOGIA</NavLink>
+
+
     </nav>
   )
 }

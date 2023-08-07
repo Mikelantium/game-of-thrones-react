@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function CharactersDetailPage() {
+  const {t} = useTranslation();
     const {id} = useParams()
 
     console.log('Recibo el id = ', id);
@@ -33,7 +35,7 @@ export default function CharactersDetailPage() {
 
 return  <>
 <Link to= "/characters">
-  <button>Volver</button>
+  <button>{t("back")}</button>
 </Link>
 
     {characters && 
@@ -44,7 +46,7 @@ return  <>
      <div className="character-info"> 
 
 <div>
- <h3> CASA </h3>
+ <h3> {t("house")} </h3>
  {houses.map((house) => {
     if (house.name === characters.house) {
         return (
@@ -59,7 +61,7 @@ return  <>
 <div>
 
 <div>
-<h3> ALIANZAS </h3>
+<h3> {t("alliances")} </h3>
 <ul>
  {characters.alliances && characters.alliances.map((item) => <li>{item}</li>)}
 </ul>
@@ -69,28 +71,28 @@ return  <>
 </div>
 
 <div> 
-   <h3> APARICIONES </h3>
+   <h3> {t("appearences")} </h3>
    <ul>
      {characters.episodes && characters.episodes.map((item) => <li>{item}</li>)}
    </ul>
 </div>
 
 <div> 
-   <h3> PADRE </h3>
+   <h3> {t("parent")}  </h3>
    <ul>
      {characters.parents && characters.parents.map((parent) => <li>{parent}</li>)}
    </ul>
 </div>
 
 <div> 
-   <h3> DESCENDIENTES </h3>
+   <h3> {t("descendents")}  </h3>
    <ul>
      {characters.siblings && characters.parents.map((sibling) => <li>{sibling}</li>)}
    </ul>
 </div>
 
 <div> 
-   <h3> TITULOS</h3>
+   <h3> {t("titles")} </h3>
    <ul>
      {characters.titles && characters.titles.map((title) => <li>{title}</li>)}
    </ul>

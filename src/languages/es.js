@@ -1,6 +1,16 @@
 export const es = {
     "lang_en": "inglés",
     "lang_es": "español",
-    "testText": "Texto cualquiera"
+    "back" : "Volver",
+    "house" : "CASA", 
+    "alliances" : "ALIANZAS",
+    "appearences" : "APARICIONES",
+    "parent" : "PADRE",
+    "descendents" : "DESCENDIENTES",
+    "titles" : "TÍTULOS",
+    "seat" : "SEDE",
+    "region" : "REGION",
+    "religions" : "RELIGIONES",
+    "foundation" : "FUNDACION"
 }
 

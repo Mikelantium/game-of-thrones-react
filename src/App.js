@@ -11,8 +11,9 @@ function App() {
     i18n.changeLanguage(code);
   };
   return (
-    <MyContext.Provider value={{ t, changeLanguage }}>
+    
     <Router>
+    <MyContext.Provider value={{ t, changeLanguage }}>
     <div className="App">
     <Navbar/>
     
@@ -20,8 +21,9 @@ function App() {
       <Routes/>
       </div>
   
-    </Router>
+    
     </MyContext.Provider>
+    </Router>
   );
   
 }

@@ -5,6 +5,7 @@ import NavbarFooter from '../../components/NavbarFooter';
 import SearchText from '../../components/SearchText';
 import { Link } from "react-router-dom";
 
+
 const CharactersPage = () => {
     const [characters, setCharacters] = useState([]);
     const [charactersCopy, setCharactersCopy] = useState([]);
@@ -36,7 +37,7 @@ const arrayCharacter = [...characters];
 
     return (   <>
     <SearchText search = {filteredCharacters}/>
-        <div className='container'>
+   <div className='container'>
             {charactersCopy.map((character, index) => (
                 <div className='container-characters' key={index}>
 
@@ -47,7 +48,9 @@ const arrayCharacter = [...characters];
                 </div>
             ))}
         </div>
-     
+        
+          
+
         <NavbarFooter/>
         </>
     );
