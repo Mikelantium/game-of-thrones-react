@@ -28,15 +28,15 @@ export default function HousesDetailPage() {
       </Link>
 
       {houses && (
-        <div>
-          <img
+        <div className="columns">
+          <img className="house-detail-image"
             src={`http://localhost:3333/${houses.image}`}
             alt={houses.name}
           />
           <h2>{houses.name}</h2>
 
-          <div className="character-info">
-            <div>
+          <div className="columns-info">
+            <div className="column-info-display">
               <div>
                 <h3> {t("seat")} </h3>
                 <p>{houses.settlement}</p>

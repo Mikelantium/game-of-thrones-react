@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./NavbarFooter.scss";
-import { useLocation, Link} from "react-router-dom";
+import { useLocation} from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const NavbarFooter = () => {
+  const {t} = useTranslation();
   const location = useLocation();
   console.log(location.pathname);
 
@@ -17,9 +19,9 @@ const NavbarFooter = () => {
   return (
     <div className="footer-container">
     <nav className="text-container">
-        <NavLink to="/characters" className= "personajes" activeClassName= "active">PERSONAJES</NavLink>
-        <NavLink to="/houses" className= "casas" activeClassName= "active">CASAS</NavLink>
-        <NavLink to="/chronology" className= "cronologia" activeClassName= "active">CRONOLOGIA</NavLink>
+        <NavLink to="/characters" className= "personajes" activeClassName= "active">{t("characters")}</NavLink>
+        <NavLink to="/houses" className= "casas" activeClassName= "active">{t("houses")}</NavLink>
+        <NavLink to="/chronology" className= "cronologia" activeClassName= "active">{t("chronology")}</NavLink>
 
 
     </nav>

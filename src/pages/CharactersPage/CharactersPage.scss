@@ -1,7 +1,6 @@
 .container{
     
-    margin-top: 20px;
-    height: 87vh;
+    height: 89.1vh;
 }
 
 .characters{
@@ -30,3 +29,38 @@
     justify-content: space-around;
 }
 
+.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 97.7vh;
+  }
+  .detail-character-image{
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .detail-shield-image{
+    width: 160px;
+    height: 191.6px;
+    object-fit: cover;
+  }
+
+  .columns-info {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .column-info-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .house-detail-image{
+    width: 267px;
+  height: 320px;
+  object-fit: contain;
+}
+  

@@ -11,5 +11,8 @@ export const en = {
     "seat" : "SEAT",
     "region" : "REGION",
     "religions" : "RELIGIONS",
-    "foundation" : "FOUNDATION"
+    "foundation" : "FOUNDATION",
+    "characters" : "CHARACTERS",
+    "houses" : "HOUSES",
+    "chronology" : "CHRONOLOGY",
 }

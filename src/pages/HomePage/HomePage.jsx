@@ -7,7 +7,7 @@ const HomePage = () => {
     <div  className='background-img'>
     <div>
     <span className="Games-of-Thrones">
-  Games of Thrones
+  Game of Thrones
 </span>
 </div>
 

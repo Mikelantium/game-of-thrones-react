@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./NavbarLang.scss";
 
 const NavbarLang = () => {
-  const { t, changeLanguage } = useContext(MyContext);
+  const { changeLanguage } = useContext(MyContext);
   return (
     <nav className="nav">
     <div>
