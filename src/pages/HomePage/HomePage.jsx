@@ -1,5 +1,4 @@
 import React from 'react'
-import NavbarFooter from '../../components/NavbarFooter'
 import "./HomePage.scss";
 import "../../App.css";
 
@@ -12,7 +11,6 @@ const HomePage = () => {
 </span>
 </div>
 
-      <NavbarFooter/>
       </div>
   )
 }

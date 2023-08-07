@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./CharactersPage.scss";
-import NavbarFooter from '../../components/NavbarFooter';
-import SearchText from '../../components/SearchText';
+import SearchText from '../../components/SearchText/SearchText';
 import { Link } from "react-router-dom";
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
+
 
 
 const CharactersPage = () => {
@@ -37,21 +39,25 @@ const arrayCharacter = [...characters];
 
     return (   <>
     <SearchText search = {filteredCharacters}/>
+   
+      
    <div className='container'>
+   <SimpleBarReact style={{ height:  '80vh', width: "100%"}}>
+   <div className='container-characters'>
             {charactersCopy.map((character, index) => (
-                <div className='container-characters' key={index}>
-
+                <div className='characters' key={index}>
                 <Link to={`/characters/${character.id}`}>
                     <img src={`http://localhost:3333/${character.image}`} alt={character.name} /> </Link> 
                     <h2>{character.name}</h2>
                     
                 </div>
             ))}
+            </div>
+        </SimpleBarReact>
         </div>
         
-          
 
-        <NavbarFooter/>
+        
         </>
     );
 }

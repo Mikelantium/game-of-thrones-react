@@ -1,0 +1,54 @@
+.container-chronology{
+    height: 94.8vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.margin{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    justify-content: center;
+    width: 700px;
+}
+
+.characters-container2{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.container-chronology img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-chronology h2{
+    font-size: 12px;
+    font-family: "Game of Thrones";
+}
+
+.box{
+    height: 400px;
+    width: 348px;
+    border: 1px solid white;
+}
+
+
+.chronology-button{
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+

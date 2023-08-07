@@ -1,20 +1,32 @@
 .container{
+    
+    margin-top: 20px;
+    height: 87vh;
+}
+
+.characters{
+    max-width: 250px;
+}
+
+.characters h2{
+    font-size: 20px;
+}
+.characters img{
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.houses img{
+    width: 220px;
+    height: 320px;
+    object-fit: contain;
+}
+
+
+.container-characters{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.container-characters{
-    max-width: 250px;
-    overflow-y: auto;
-}
-
-.container-characters h2{
-    font-size: 20px;
-}
-.container-characters img{
-    width: 248px;
-    height: 320px;
-    margin: 0 18px 0 38px;
-    object-fit: cover;
-}

@@ -1,0 +1,17 @@
+.nav{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 9999;
+    position: absolute;
+    top: 0;  
+    right: 100px;
+}
+
+.es{
+    width: 64px;
+    height: 50px;
+    object-fit: contain;
+    display: flex;
+
+}   

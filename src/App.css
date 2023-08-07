@@ -7,6 +7,8 @@
   text-align: center;
   color: white;
   background-color: black;
+  padding: 0px 85px;
+  
 }
 
 .App-logo {
@@ -28,7 +30,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .App-link {

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import NavbarFooter from '../../components/NavbarFooter';
-import SearchText from '../../components/SearchText';
+import SearchText from '../../components/SearchText/SearchText';
 import { Link } from 'react-router-dom';
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 
 const HousesPage = () => {
     const [houses, setHouses] = useState([]);
@@ -34,21 +35,25 @@ const HousesPage = () => {
     }
 
     return ( 
-    <div>
+        <>
 <SearchText search = {filteredHouses}/>
         <div className='container'>
+        <SimpleBarReact style={{ height:  '80vh', width: "100%"}}>
+        <div className='container-characters'>
             {housesCopy.map((house, index) => (
-                <div className='container-characters' key={index}>
-
+                
+                <div className='houses' key={index}>
                 <Link to={`/houses/${house.id}`}>
                     <img src={`http://localhost:3333/${house.image}`} alt={house.name} /> </Link> 
                     <h2>{house.name}</h2>
-                    
-                </div>
+                    </div>
+                
             ))}
+            </div>
+            </SimpleBarReact>
         </div>
-            <NavbarFooter/>
-        </div>
+        
+        </>
     );
 }
 
