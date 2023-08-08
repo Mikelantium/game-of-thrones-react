@@ -24,7 +24,7 @@ export default function HousesDetailPage() {
   return (
     <>
       <Link to="/houses">
-        <button>{t("back")} </button>
+        <button className="back-button">{t("back")} </button>
       </Link>
 
       {houses && (
@@ -37,32 +37,36 @@ export default function HousesDetailPage() {
 
           <div className="columns-info">
             <div className="column-info-display">
-              <div>
+              <div className="columns-detail">
                 <h3> {t("seat")} </h3>
-                <p>{houses.settlement}</p>
+                <ul>
+                <li>{houses.settlement}</li>
+                </ul>
               </div>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("region")}  </h3>
-              <p>{houses.region}</p>
+              <ul>
+              <li>{houses.region}</li>
+              </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("alliances")}  </h3>
               <ul>
      {houses.alliances && houses.alliances.map((alliances) => <li>{alliances}</li>)}
    </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("religions")}  </h3>
               <ul>
      {houses.religions && houses.religions.map((religions) => <li>{religions}</li>)}
    </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("foundation")}  </h3>
               <p>{houses.foundation}</p>
             </div>

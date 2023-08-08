@@ -31,7 +31,7 @@ export default function CharactersDetailPage() {
   return (
     <>
       <Link to="/characters">
-        <button>{t("back")}</button>
+        <button className="back-button">{t("back")}</button>
       </Link>
 
       {characters && (
@@ -43,7 +43,7 @@ export default function CharactersDetailPage() {
           <h2>{characters.name}</h2>
 
           <div className="columns-info">
-            <div className="column-info-display">
+            <div className="columns-info-display">
               <h3> {t("house")} </h3>
               {houses.map((house) => {
                 if (house.name === characters.house) {
@@ -57,9 +57,9 @@ export default function CharactersDetailPage() {
                   );
                 }
               })}
-              <h2> {characters.house} </h2>
+              
             </div>
-            <div>
+            <div className="columns-detail">
               <div>
                 <h3> {t("alliances")} </h3>
                 <ul>
@@ -69,7 +69,7 @@ export default function CharactersDetailPage() {
               </div>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("appearences")} </h3>
               <ul>
                 {characters.episodes &&
@@ -77,7 +77,7 @@ export default function CharactersDetailPage() {
               </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("parent")} </h3>
               <ul>
                 {characters.parents &&
@@ -85,7 +85,7 @@ export default function CharactersDetailPage() {
               </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("descendents")} </h3>
               <ul>
                 {characters.siblings &&
@@ -93,7 +93,7 @@ export default function CharactersDetailPage() {
               </ul>
             </div>
 
-            <div>
+            <div className="columns-detail">
               <h3> {t("titles")} </h3>
               <ul>
                 {characters.titles &&

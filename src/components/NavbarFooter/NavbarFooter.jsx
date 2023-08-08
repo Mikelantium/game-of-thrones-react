@@ -14,6 +14,9 @@ const NavbarFooter = () => {
   if (location.pathname.includes("/characters/")) {
     return <> </>
   } 
+  // if (location.pathname.includes("/")) {
+  //   return <> </>
+  // } 
  
     
   return (

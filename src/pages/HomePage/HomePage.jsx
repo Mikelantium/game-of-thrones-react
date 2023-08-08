@@ -5,13 +5,14 @@ import "../../App.css";
 const HomePage = () => {
   return (
     <div  className='background-img'>
-    <div>
+    
     <span className="Games-of-Thrones">
   Game of Thrones
 </span>
+
 </div>
 
-      </div>
+      
   )
 }
 
